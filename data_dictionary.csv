@@ -1,0 +1,30 @@
+column,type,units,allowed_range_or_levels,description,missing_pct
+user_id,ID,integer,100000-999999,Unique user identifier,0.0
+churned,Target,binary,0/1,Whether user cancelled subscription within 30 days,0.0
+age,Continuous,years,18-80,Age of the user,2.0
+gender,Categorical,text,"Male/Female/Non-binary",Gender identity,1.5
+subscription_type,Categorical,text,"Monthly/Annual",Type of subscription plan,0.0
+monthly_cost,Continuous,USD,4.99-59.99,Monthly subscription cost,1.0
+tenure_months,Discrete,months,0-60,Months since signup,0.0
+signup_weekday,Categorical,text,"Monday-Sunday",Day of week when user signed up,0.0
+signup_month,Categorical,text,"January-December",Month when user signed up,0.0
+primary_goal,Categorical,text,"Weight Loss/Muscle Gain/Endurance/Flexibility/Stress Reduction/General Fitness",Main fitness goal,2.0
+region,Categorical,text,"Northwest/Southwest/Midwest/Southeast/Northeast",Geographic region,3.0
+device_type,Categorical,text,"iOS/Android/Web",Primary device used,0.5
+workouts_per_week,Discrete,count,0-21,Average workouts per week,3.0
+weekly_workout_minutes,Continuous,minutes,0-600,Total workout time per week,4.0
+avg_session_duration,Continuous,minutes,0-120,Average duration per workout session,2.5
+streaks_longest,Discrete,count,0-365,Longest consecutive workout streak streak,1.0
+current_streak,Discrete,count,0-365,Current consecutive workout streak,0.0
+goals_set,Discrete,count,0-20,Number of fitness goals set,1.5
+goals_achieved,Discrete,count,0-20,Number of fitness goals achieved,2.0
+nutrition_tracking_used,Binary,flag,0/1,Whether user tracking nutrition,3.0
+meditation_used,Binary,flag,0/1,Whether user using meditation features,2.5
+social_features_used,Binary,flag,0/1,Whether user using social features,3.0
+has_friend_on_app,Binary,flag,0/1,Whether user has friends connected on app,2.0
+app_rating,Ordinal,stars 1-5,1-5,User ratings of app in store,4.0
+satisfaction_score,Ordinal,scale 1-5,1-5,Self-reported satisfaction with app,3.5
+ease_of_use_rating,Ordinal,scale 1-5,1-5,Self-reported ease of use rating,3.0
+customer_service_contacts,Discrete,count,0-10,Number of customer service contacts,5.0
+discount_used,Binary,flag,0/1,Whether user used a discount code,2.0
+monthly_active_days,Discrete,days,0-31,Days user was active in app last month,2.5

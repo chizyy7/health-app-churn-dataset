@@ -1,0 +1,29 @@
+Health App Churn Dataset Benchmark Results
+==================================================
+
+Dataset: health_app_churn_50k.csv
+Models evaluated: Majority Class Baseline, Logistic Regression, Gaussian Naive Bayes, Decision Tree (max_depth=5), Random Forest, Gradient Boosting (HistGradientBoosting)
+Validation: 5-fold stratified cross-validation
+Metric: ROC-AUC
+
+RESULTS TABLE:
+------------------------------
+Model                          Mean AUC     Std AUC     
+------------------------------
+Majority Class Baseline        0.5000       0.0000      
+Logistic Regression            0.7764       0.0062      
+Gaussian Naive Bayes           0.7239       0.0060      
+Decision Tree (max_depth=5)    0.8121       0.0033      
+Random Forest                  0.8481       0.0049      
+Gradient Boosting              0.8665       0.0045      
+------------------------------
+
+TARGET VERIFICATION:
+--------------------
+1. Best model AUC in [0.85, 0.93]: 0.8665
+2. Not near 1.0 or 0.5: Best=0.8665, LR=0.7764
+3. RF and GB >= LR + 0.02: RF diff=0.0718, GB diff=0.0901
+4. NB and DT clearly below best: NB diff=0.1426, DT diff=0.0543
+5. Top model gap > avg std: Gap=0.0184, Avg std=0.0047
+
+Overall: ALL TARGETS MET: YES
